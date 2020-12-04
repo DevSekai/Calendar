@@ -44,9 +44,9 @@ Citizen.CreateThread( function()
         if day == v.DayNbr then
             v.Restricted = false
             GreatDay = day
+            TriggerServerEvent("Calendar:GetDay", GreatDay)
         end
     end
-    TriggerServerEvent("Calendar:GetDay", 24)
 end)
 
 Citizen.CreateThread(function ()
